@@ -1,0 +1,173 @@
+/*
+ Theme Name:   Deux Child
+ Theme URI:    http://example.com/deux-child/
+ Description:  Deux Child Theme
+ Author:       QedQod
+ Author URI:   http://example.com
+ Template:     deux
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  deux-child
+*/
+/* General */
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('fonts/helvetica-webfont.eot');
+    src: url('fonts/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-webfont.woff2') format('woff2'),
+         url('fonts/helvetica-webfont.woff') format('woff'),
+         url('fonts/helvetica-webfont.ttf') format('truetype'),
+         url('fonts/helvetica-webfont.svg#helveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticabold';
+    src: url('fonts/helvetica-bold-webfont.eot');
+    src: url('fonts/helvetica-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-bold-webfont.woff2') format('woff2'),
+         url('fonts/helvetica-bold-webfont.woff') format('woff'),
+         url('fonts/helvetica-bold-webfont.ttf') format('truetype'),
+         url('fonts/helvetica-bold-webfont.svg#helveticabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticabold_oblique';
+    src: url('fonts/helvetica-boldoblique-webfont.eot');
+    src: url('fonts/helvetica-boldoblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-boldoblique-webfont.woff2') format('woff2'),
+         url('fonts/helvetica-boldoblique-webfont.woff') format('woff'),
+         url('fonts/helvetica-boldoblique-webfont.ttf') format('truetype'),
+         url('fonts/helvetica-boldoblique-webfont.svg#helveticabold_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaoblique';
+    src: url('fonts/helvetica-oblique-webfont.eot');
+    src: url('fonts/helvetica-oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-oblique-webfont.woff2') format('woff2'),
+         url('fonts/helvetica-oblique-webfont.woff') format('woff'),
+         url('fonts/helvetica-oblique-webfont.ttf') format('truetype'),1
+         url('fonts/helvetica-oblique-webfont.svg#helveticaoblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body, button, input, select, textarea, p, a{font-family:helveticaregular;}
+p{text-align:justify;}
+#content .container .grey-background{margin-top:0px !important;}
+.menu-item-mobile-wishlist{display:none !important;}
+.grey-background{background-color:#F8F8F8;margin-top:0px !important;padding-top:100px;}
+#menu-menu-principal li a{color:#35484e;font-family:helveticaregular;font-size:18px;}
+.home #menu-menu-principal li a{color:#FFF;font-family:helveticaregular;font-size:18px;}
+.header-sticky .site-header.sticky #menu-menu-principal li a{color:#35484e;}
+.nav-menu li{margin-right:25px;}
+/* Tamaño de cabecera temporal hasta que decida el cliente
+.page-header-image .page-header .page-header-image{background-size:100% 100%;}
+.header-transparent.page-header-image .page-header{padding:160px 0 150px 0;}
+**********************************************/
+.header-transparent.header-hoverable .site-header:hover #menu-menu-principal li a{color:#35484e;}
+.page-header .deux-container{position:relative;top:120px;}
+.page-header .page-title{font-family:helveticabold !important;color:#35484e;font-size:70px !important;text-shadow:1px 1px 2px #FFF, 0 0 1em #FFF, 0 0 0.2em #FFF;display:inline-block;}
+.social-networks-bottom{position:relative;top:30px;text-align:center;}
+.social-networks-bottom ul{list-style:none;margin:0 0 0 0;padding:0 0 0 0;}
+.social-networks-bottom ul li{display:inline-block;}
+.responsive-height{padding-top:auto;}
+.inner-product-page{width:100%;margin-top:50px;}
+.inner-product-page .wpb_text_column.wpb_content_element .wpb_wrapper p{font-size:4rem;font-weight:700;text-transform:none;color:#35484e !important;margin:15px 0 30px 0;text-align:center;}
+.inner-product-page .single-product .product-summary .ribbons{display:none;}
+.inner-product-page .single-product .product-summary .images{width:100%;}
+.inner-product-page .single-product .product-summary .images figure .woocommerce-product-gallery__slider{margin-left:100px;display:block;width:auto;}
+.inner-product-page .single-product .product-summary .images figure .thumbnails{width:100px;margin:-1px 0 0 -1px;padding:0 20px 0 0;position:absolute;top:0;bottom:0;overflow-y:auto;}
+.inner-product-page .single-product .product-summary .summary.entry-summary{width:100%;}
+.inner-product-page .single-product .product-summary .product-toolbar{display:none;}
+.inner-product-page .single-product .product-summary h1.product_title{display:none;}
+.inner-product-page section.related.products{display:none;}
+/* Header */
+.site-header{padding-top:20px;padding-bottom:20px;}
+.container .vc_custom_1522824377063{margin-top:0px !important;}
+/* Breadcrubs */
+.breadcrumb{color:#35484e;font-family:helveticaregular !important;font-size:16px !important;}
+.breadcrumb span a, .breadcrumb .fa{color:#000;}
+.breadcrumb span, .breadcrumb .fa{text-shadow: 1px 1px 2px #FFF, 0 0 1em #FFF, 0 0 0.2em #FFF;}
+/* Buscador */
+.entry-title{color:#35484e;font-family:helveticaregular !important;}
+.search .breadcrumb{display:none;}
+.search #primary .search-form{display:none;}
+.search #primary article .entry-title a{color:#35484e;font-family:helveticaregular !important;}
+/* Home */
+.linea-productos-home{position:relative;}
+.linea-productos-home .wpb_wrapper{text-align:center;}
+.linea-productos-home .wpb_wrapper p{color:#35484e;font-family:helveticabold;text-transform:uppercase;}
+.grupo-productos-home{position:relative;}
+.grupo-productos-home .deux-banner4 a .banner-content .banner-title{font-size:32px;font-family:helveticabold;text-transform:uppercase;}
+.blog-post-home{position:relative;}
+.blog-post-home .post-summary{padding:40px 30px 50px !important;}
+/* Contacto */
+.page-contact-info{position:relative;}
+.page-contact-info h1, .page-contact-info p{color:#35484e;font-family:helveticabold;margin-bottom:30px !important;}
+.page-contact-info i{color:#919894;}
+.page-contact-image{position:relative;box-sizing:border-box;width:100%;}
+.page-contact-image figure, .page-contact-image figure div, .page-contact-image figure div img{width:100%;}
+.page-contact-image figure{background-color:#f7f7f7;padding:5px;}
+.blockUI.blockMsg.blockPage{z-index:10110 !important;top:35% !important;}
+/* Nosotros */              
+.aboutus-callto-row .vc_icon_element.vc_icon_element-outer .vc_icon_element-inner{border:2px solid #ebebeb;}
+/* Productos */
+ul.products li.product div.product-header div.buttons{display:none !important;}
+.yith-wcwl-add-to-wishlist{display:none !important;}
+a.compare.button{display:none !important;}
+.product_meta span.posted_in{display:none !important;}
+.woocommerce div.product .product_title{color:#35484e !important;}
+.woocommerce .woocommerce-breadcrumb{color:#35484e;}
+/* Blog */
+.entry-excerpt-container.intro.lead{display:none;}
+.widget-title{font-family:helveticaregular !important;color:#35484e !important;}
+article .entry-container .post-summary .entry-title a{font-family:helveticaregular !important;color:#35484e !important;}
+.single-share ul.share-container li:nth-child(3), .single-share ul.share-container li:nth-child(4){display:none !important;}
+.comment-form .comment-form-cookies-consent{display:none !important;}
+.hfeed .site-main .hentry{border-bottom:1px solid #35484e;}
+.widget{border-bottom:1px solid #35484e;}
+/* Contacto en las páginas */
+.bottom-contact-form{margin-top:30px;position:relative;top:40px;}
+.bottom-contact-form h2{font-family:helveticabold !important;color:#35484e;text-transform:uppercase;}
+.bottom-contact-form form p span input[type=text], .bottom-contact-form form p span input[type=email], .bottom-contact-form form p span input[type=textarea], .bottom-contact-form form p input[type=submit]{font-family:helveticaregular !important;}
+.bottom-contact-form form p input[type=submit]{background-color:#35484e;}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors{display:block;position:absolute;bottom:108px;margin:0 auto;left:0;right:0;text-align:center;width:70%;font-size:12px;padding:0.1em 1em;}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ng{display:block;position:absolute;bottom:108px;margin:0 auto;left:0;right:0;text-align:center;width:70%;font-size:12px;padding:0.1em 1em;}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok{position:absolute;bottom:108px;margin:0 auto;left:0;right:0;text-align:center;width:70%;font-size:12px;padding:0.1em 1em;}
+/* Contactenos */
+.deux-contact-box .contact-info{border-bottom:1px dashed #35484e;}
+/* Pie de Pagina */
+.footer-fixed .site-footer{background-color:#f8f8f8;}
+.footer-info{font-family:helveticaregular !important;text-align:center;}
+.footer-instagram{bottom:-70px;}
+.footer-menu ul li a{font-family:helveticaregular;}
+.footer-bottom{font-size:10px;}
+.footer-bottom .info-value a{font-size:14px;font-weight:bold;}
+/* Media Queries */
+@media screen and (max-width: 1130px){
+    .page-header-image .page-header .page-header-image{background-size:cover;}
+}
+@media screen and (max-width: 820px){
+    .blockUI.blockMsg.blockPage{width:50% !important;left:20% !important;}
+}
+@media screen and (max-width: 767px){
+    .responsive-height{padding-top:50px;}
+    .wpb_column.vc_column_container p{font-size:14px;}
+}
+@media screen and (max-width: 700px){
+}
+@media screen and (max-width: 500px){
+    .page-header .page-title{font-size:50px !important;}
+    .breadcrumb{font-size:20px !important;}
+    .header-transparent.page-header-image .page-header{padding:240px 0 15px 0;}
+    .page-header .deux-container{top:0px;}
+    .blockUI.blockMsg.blockPage{width:65% !important;left:10% !important;}
+}

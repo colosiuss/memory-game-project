@@ -1,27 +1,35 @@
 html {
+
     box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
+
     box-sizing: inherit;
 }
 
 html,
 body {
+
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    color: #fff;
+    text-align: center;
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+
+    background: #ffffff url('../img/gambling-pattern-harts.png'); /* Background pattern for the deck */
     font-family: 'Coda', cursive;
+    font-size: 1em;
 }
 
 .container {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,32 +37,34 @@ body {
 }
 
 h1 {
+
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
-/*
- * Styles for the deck of cards
- */
+/* --- Styles for the deck of cards -- */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
+
+    width: 42.5em;
+    min-height: 42.5em;
+    background: #228B22;
+    padding: 2em;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 0 3em;
 }
 
 .deck .card {
+
     height: 125px;
     width: 125px;
-    background: #2e3d49;
+    margin: 0.2rem 0.2rem;
+    background: rgba(46, 61, 73, 0.9) url('../img/gambling-pattern.jpg'); /* Background patter for the cards */
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
@@ -66,44 +76,280 @@ h1 {
 }
 
 .deck .card.open {
+
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
 }
 
 .deck .card.show {
+
     font-size: 33px;
 }
 
 .deck .card.match {
+
     cursor: default;
-    background: #02ccba;
+    background: #1bc45f;
+    font-size: 33px;
+    animation-name: rubberBand;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+
+}
+
+.deck .card.unMatch {
+
+    animation-name: pulse;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+    cursor: default;
+    background: #ff2400;
     font-size: 33px;
 }
 
-/*
- * Styles for the Score Panel
- */
 
-.score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
+.back {
+
+    background: #2e3d49;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
-.score-panel .stars {
+.check {
+
+    transform: rotateY(180deg);
+}
+
+/* --- modal section -- */
+
+.pop-up {
+
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.result {
+
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 500px;
+    max-width: 90vw;
+    background-color: #228B22;
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+
+.result p {
+
+    display: inline;
+}
+
+.result p:nth-child(2) {
+
+    display: block;
+}
+
+input#btn-submit{
+
+    height: 30px;
+}
+
+
+/* ---  footer section -- */
+
+footer {
+    
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000;
+    text-shadow:1px 1px 2px #FFF, 0 0 1em #FFF, 0 0 0.2em #FFF;
+}
+
+footer div {
+
+    width: 100%;
+}
+
+footer img {
+
+    max-height: 1.5em;
+    max-width: 1.5em;
+}
+
+.fa-star {
+
+    color: #ffff99;
+}
+
+.hide {
+
+    display: none;
+}
+
+
+/* --- Styles for the Score Panel --- */
+
+.score-panel {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score-panel {
+
+    text-align: left;
+    width: 456px;
+    margin-bottom: 10px;
+    background-color: rgba(70, 102, 255, 0.8);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.score-panel .star-rating {
+    
     margin: 0;
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
 }
 
-.score-panel .stars li {
+.score-panel .star-rating li {
+
     list-style: none;
     display: inline-block;
 }
 
 .score-panel .restart {
+
     float: right;
     cursor: pointer;
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+
 }
+
+.timer {
+
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.btn {
+
+    height: 25px;
+    border-radius: 40px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    color: white;
+    background: #8b171c;
+    border: 1px solid #8b171c;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1em;
+}
+
+.play-again {
+
+    margin: 10px 0 15px 0;
+}
+
+.counter span {
+
+    display: inline-block;
+    width: 60px;
+}
+
+/* -- animations -- */
+
+@keyframes flipInY {
+
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
